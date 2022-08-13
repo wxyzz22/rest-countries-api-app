@@ -38,7 +38,7 @@ export default function CountrySingle() {
                                 <div className='font-32 extra-bold single-country-title'>{item.name.common}</div>
                                 <div className='single-country-info'>
                                     <div className='font-14 just-bold'><span className='semi-bold'>Native Name:</span> {item.name.nativeName ? Object.values(item.name.nativeName)[0].common : item.name.common ? item.name.common : 'None'}</div>
-                                    <div className='font-14 just-bold'><span className='semi-bold'>Population:</span> {item.population ? item.population : '0'}</div>
+                                    <div className='font-14 just-bold'><span className='semi-bold'>Population:</span> {item.population ? item.population.toLocaleString("en-US") : '0'}</div>
                                     <div className='font-14 just-bold'><span className='semi-bold'>Region:</span> {item.region ? item.region : 'Oops, not on earth'}</div>
                                     <div className='font-14 just-bold'><span className='semi-bold'>Sub Region:</span> {item.subregion ? item.subregion : 'Oops, not part of anything'}</div>
                                     <div className='font-14 just-bold'><span className='semi-bold'>Capital:</span> {item.capital ? item.capital : 'None'}</div>
